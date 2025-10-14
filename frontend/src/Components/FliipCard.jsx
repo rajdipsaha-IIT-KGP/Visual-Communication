@@ -9,7 +9,7 @@ const FlipCard = ({
   navigateTo = "/",
 }) => {
   const [flipped, setFlipped] = useState(false);
-  const navigate = useNavigate(); // ✅ call hook at top level
+  const navigate = useNavigate(); 
 
   return (
     <div
