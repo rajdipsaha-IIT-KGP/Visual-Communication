@@ -35,7 +35,7 @@ const FlipCard = ({
             />
           </div>
 
-          <div className="w-full bg-black/60 border-t border-gray-400 flex justify-center items-center p-2 rounded-b-xl">
+          <div className="w-full bg-black/40 border-t border-gray-400 flex justify-center items-center p-2 rounded-b-xl">
             <p className="text-white font-[Berkshire_Swash] text-center text-sm">
               {frontText}
             </p>
@@ -43,7 +43,7 @@ const FlipCard = ({
         </div>
 
         {/* Back side */}
-        <div className="absolute w-full h-full flex justify-center items-center text-white text-center rounded-xl bg-black/80 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+        <div className="absolute w-full h-full flex justify-center items-center text-white text-center rounded-xl bg-black/60 [backface-visibility:hidden] [transform:rotateY(180deg)]">
           <button
             className="
               text-white 
