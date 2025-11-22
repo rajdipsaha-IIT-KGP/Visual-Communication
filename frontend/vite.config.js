@@ -5,16 +5,11 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(),
+    tailwindcss(),   // keep this (Tailwind v4 plugin)
   ],
   css: {
-    transformer: "postcss",   // disable LightningCSS
-    postcss: {}               // force Vite to use PostCSS
-  },
-  optimizeDeps: {
-    exclude: ["lightningcss"] // hard-disable lightningcss
-  },
-  build: {
-    cssMinify: "esbuild"      // also avoids lightningcss during minify
+    lightningcss: {
+      browserslist: false,   // 🔥 Fix for Vercel LightningCSS error
+    }
   }
 })
