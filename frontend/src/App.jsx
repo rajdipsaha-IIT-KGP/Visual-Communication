@@ -8,6 +8,7 @@ import BlueTea from "./Components/BlueTea";
 import MornigaTea from "./Components/MornigaTea";
 import HibiscousTea from "./Components/HibiscousTea";
 import AboutUs from "./Components/AboutUs";
+import Error from "./Components/Error";
 const App = () => {
   return (
     <Router>
@@ -39,6 +40,7 @@ const App = () => {
               <Route path="/moringatea" element={<MornigaTea />} />
               <Route path="/hibiscustea" element={<HibiscousTea />} />
               <Route path="/about" element={<AboutUs />} />
+              <Route path="*" element={<Error />} />
             </Routes>
           </main>
 
