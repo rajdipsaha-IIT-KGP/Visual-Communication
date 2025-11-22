@@ -8,6 +8,13 @@ export default defineConfig({
     tailwindcss(),
   ],
   css: {
-    transformer: "postcss"   
+    transformer: "postcss",   // disable LightningCSS
+    postcss: {}               // force Vite to use PostCSS
+  },
+  optimizeDeps: {
+    exclude: ["lightningcss"] // hard-disable lightningcss
+  },
+  build: {
+    cssMinify: "esbuild"      // also avoids lightningcss during minify
   }
 })
