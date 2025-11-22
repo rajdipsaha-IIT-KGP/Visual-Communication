@@ -7,42 +7,59 @@ const Moringa = () => {
    const content = [
     {
       name: "History and Context",
-      description: `The idea of processing Moringa Tea at Sundarban Bari emerged through a close collaboration with the Farmers Producer Company (FPC). During one such interaction, a member shared insights about the growing market demand for moringa leaves. This simple exchange of information and encouragement inspired Tapash da and the local community to begin large-scale drying and processing of moringa leaves.
-. 
-`,
-
+      description: (
+        <>
+          The idea of processing Moringa Tea at Sundarban Bari emerged through a close collaboration with the <b className="font-bold">Farmers Producer Company (FPC)</b>. During one such interaction, a member shared insights about the <b className="font-bold">growing market demand</b> for moringa leaves. This simple exchange of information and encouragement inspired <b className="font-bold">Tapash da</b> and the local community to begin large-scale <b className="font-bold">drying and processing</b> of moringa leaves.
+        </>
+      )
     },
-    
     {
       name: "Production process",
-      description: `Fresh moringa leaves are carefully harvested, cleaned, and dried to preserve their rich green colour and nutritional value. Once fully dried, the leaves are gently crushed or powdered and packed for tea and other dietary uses. This simple, low-energy process supports sustainable production while retaining the natural goodness of moringa.
-`,
+      description: (
+        <>
+          Fresh <b className="font-bold">moringa leaves</b> are carefully harvested, cleaned, and dried to preserve their <b className="font-bold">rich green colour</b> and <b className="font-bold">nutritional value</b>. Once fully dried, the leaves are gently <b className="font-bold">crushed or powdered</b> and packed for <b className="font-bold">tea</b> and other dietary uses. This simple, <b className="font-bold">low-energy process</b> supports sustainable production while retaining the natural goodness of moringa.
+        </>
+      )
     },
     {
       name: "Grassroots and local mobilization",
-      description: `Local women’s groups and self-help collectives in Kumirmari have come together to process and promote moringa tea. This grassroots collaboration strengthens community networks while encouraging sustainable use of locally available natural resources.
-
-`,
-    },{
+      description: (
+        <>
+          Local <b className="font-bold">women’s groups</b> and <b className="font-bold">self-help collectives</b> in Kumirmari have come together to process and promote <b className="font-bold">moringa tea</b>. This grassroots collaboration strengthens <b className="font-bold">community networks</b> while encouraging sustainable use of locally available natural resources.
+        </>
+      )
+    },
+    {
       name:"Livelihood opportunities and market linkages",
-      description:`Moringa cultivation and tea processing create sustainable livelihood opportunities for marginal farmers in saline and flood-prone areas, like the Indian Sundarbans. With increasing awareness of its health benefits, Moringa connects local producers to national health-food markets.
-
-`,
+      description: (
+        <>
+          <b className="font-bold">Moringa cultivation</b> and tea processing create <b className="font-bold">sustainable livelihood opportunities</b> for <b className="font-bold">marginal farmers</b> in saline and flood-prone areas, like the Indian Sundarbans. With increasing awareness of its <b className="font-bold">health benefits</b>, Moringa connects local producers to <b className="font-bold">national health-food markets</b>.
+        </>
+      )
     },
     {
       name:`Gender empowerment and agencys`,
-      description:`Women’s self-help groups (SHGs) are central to Moringa leaf drying and tea packaging, enabling them to earn supplementary income and manage small enterprises
-.
-`
+      description: (
+        <>
+          Women’s <b className="font-bold">self-help groups (SHGs)</b> are central to Moringa leaf drying and tea packaging, enabling them to earn <b className="font-bold">supplementary income</b> and manage <b className="font-bold">small enterprises</b>.
+        </>
+      )
     },
     {
       name:"Nutritional benefits",
-      description:`Packed with vitamins A, C, and E, calcium and iron. Moringa Tea supports immunity, reduces inflammation, and helps detoxify the body. 
-`
+      description: (
+        <>
+          Packed with <b className="font-bold">vitamins A, C, and E</b>, <b className="font-bold">calcium</b> and <b className="font-bold">iron</b>. Moringa Tea supports <b className="font-bold">immunity</b>, reduces <b className="font-bold">inflammation</b>, and helps <b className="font-bold">detoxify</b> the body.
+        </>
+      )
     },
     {
       name:`Food security (local to global)`,
-      description:`Particularly in the Indian Sundarbans and largely in India, Moringa serves as a vital nutritional source where access to fresh vegetables is limited due to salinity and remoteness. One tree whose leaves, flowers and stems are edible and supports household food security by providing vitamins, iron, and protein from a hardy, fast-growing tree. On a global scale, Moringa is recognized as a climate-smart crop that can combat malnutrition and micronutrient deficiencies in vulnerable regions.`
+      description: (
+        <>
+          Particularly in the Indian Sundarbans and largely in India, Moringa serves as a <b className="font-bold">vital nutritional source</b> where access to fresh vegetables is limited due to <b className="font-bold">salinity and remoteness</b>. One tree whose leaves, flowers, and stems are <b className="font-bold">edible</b> supports household food security by providing <b className="font-bold">vitamins, iron, and protein</b> from a hardy, fast-growing tree. On a global scale, Moringa is recognized as a <b className="font-bold">climate-smart crop</b> that can combat <b className="font-bold">malnutrition</b> and <b className="font-bold">micronutrient deficiencies</b> in vulnerable regions.
+        </>
+      )
     }
   ];
 
@@ -56,7 +73,6 @@ const Moringa = () => {
         className="relative z-10 max-w-5xl flex flex-col items-center"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        
         transition={{ duration: 1 }}
       >
         <h1 className="text-5xl md:text-6xl font-extrabold mb-8 text-white">
@@ -64,7 +80,6 @@ const Moringa = () => {
         </h1>
 
         {/* Milk image just above the paragraph */}
-        <span></span>
         <img
           src={MilkBackground}
           alt="Milk"
@@ -72,21 +87,17 @@ const Moringa = () => {
         />
 
         <div className="w-full">
- 
- {
-    content.map((item, index) => (
-        <Dropdown key={index} title={item.name}>
-        <p className="text-left text-gray-200 font-light bg-black/60 p-4 rounded-2xl shadow-lg hover:bg-black/70 transition-all duration-500">
-        {item.description}
-        </p>
-      </Dropdown>
-    ) )
- }
-
+          {content.map((item, index) => (
+            <Dropdown key={index} title={item.name}>
+              <p className="text-left text-gray-200 font-normal bg-black/60 p-4 rounded-2xl shadow-lg hover:bg-black/70 transition-all duration-500">
+                {item.description}
+              </p>
+            </Dropdown>
+          ))}
         </div>
       </motion.div>
     </div>
   )
 }
 
-export default Moringa
+export default Moringa;

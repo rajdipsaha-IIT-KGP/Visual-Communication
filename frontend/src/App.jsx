@@ -6,6 +6,7 @@ import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import BlueTea from "./Components/BlueTea";
 import MornigaTea from "./Components/MornigaTea";
+import HibiscousTea from "./Components/HibiscousTea";
 
 const App = () => {
   return (
@@ -36,6 +37,8 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/bluetea" element={<BlueTea />} />
               <Route path="/moringatea" element={<MornigaTea />} />
+              <Route path="/hibiscustea" element={<HibiscousTea />} />
+              
             </Routes>
           </main>
 
