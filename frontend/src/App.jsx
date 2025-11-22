@@ -7,7 +7,7 @@ import Home from "./Components/Home";
 import BlueTea from "./Components/BlueTea";
 import MornigaTea from "./Components/MornigaTea";
 import HibiscousTea from "./Components/HibiscousTea";
-
+import AboutUs from "./Components/AboutUs";
 const App = () => {
   return (
     <Router>
@@ -38,7 +38,7 @@ const App = () => {
               <Route path="/bluetea" element={<BlueTea />} />
               <Route path="/moringatea" element={<MornigaTea />} />
               <Route path="/hibiscustea" element={<HibiscousTea />} />
-              
+              <Route path="/about" element={<AboutUs />} />
             </Routes>
           </main>
 
