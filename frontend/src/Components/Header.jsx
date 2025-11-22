@@ -1,31 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
-
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faHome,
-  faUser,
-  faCode,
-  faCalendarAlt,
-  faImages,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const sidebarRef = useRef(null);
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  const navItems = [
-    { name: "Home", icon: faHome },
-    { name: "Milk", icon: faUser },
-    { name: "Honey", icon: faCode },
-    { name: "Fish", icon: faCalendarAlt },
-    { name: "Ghee", icon: faImages },
-  ];
-
-  // Close sidebar when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
@@ -39,7 +21,7 @@ const Header = () => {
 
   return (
     <>
-      {/* Menu Button */}
+      {/* Sidebar Open Button */}
       <button
         className="fixed top-5 left-5 z-50 text-white bg-black/70 rounded-full p-3 cursor-pointer"
         onClick={() => setIsOpen(true)}
@@ -47,7 +29,7 @@ const Header = () => {
         <FontAwesomeIcon icon={faBars} size="lg" />
       </button>
 
-      {/* Overlay */}
+      {/* Dim background overlay */}
       {isOpen && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"></div>
       )}
@@ -55,87 +37,89 @@ const Header = () => {
       {/* Sidebar */}
       <div
         ref={sidebarRef}
-        className={`fixed top-0 left-0 h-full w-64 
-                    bg-black/40 backdrop-blur-md text-white shadow-2xl z-50
-                    transform transition-transform duration-300 ease-in-out
-                    ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 h-full w-64 bg-black/40 backdrop-blur-md text-white shadow-2xl z-50
+          transition-transform duration-300 ease-in-out
+          ${isOpen ? "translate-x-0" : "-translate-x-full"}
+        `}
+        style={{ display: "block" }}
       >
-        {/* Centered Heading */}
-        <div className="flex justify-center items-center py-6 border-b border-gray-700">
+        {/* Title Section */}
+        <div
+          style={{
+            textAlign: "center",
+            padding: "24px 0",
+            borderBottom: "1px solid rgb(55 65 81)",
+          }}
+        >
           <h1 className="text-2xl font-semibold tracking-wide">Products</h1>
         </div>
 
-        {/* Navigation Items */}
-      <ul className="flex flex-col space-y-6 mt-8 px-6">
-  
-    
-         <li
-      
-      className="flex justify-center items-center gap-3 cursor-pointer text-lg hover:text-emerald-400 transition"
-    >
-     
-      <button
-        onClick={() => {
-        navigate('/about')
-        }}
-      >
-       Milk
-      </button>
-    </li>
-     <li
-      
-      className="flex justify-center items-center gap-3 cursor-pointer text-lg hover:text-emerald-400 transition"
-    >
-     
-      <button
-        onClick={() => {
-        navigate('/about')
-        }}
-      >
-      Honey
-      </button>
-    </li>
-     <li
-      
-      className="flex justify-center items-center gap-3 cursor-pointer text-lg hover:text-emerald-400 transition"
-    >
-     
-      <button
-        onClick={() => {
-        navigate('/about')
-        }}
-      >
-      Fish
-      </button>
-    </li>
-    <li
-      
-      className="flex justify-center items-center gap-3 cursor-pointer text-lg hover:text-emerald-400 transition"
-    >
-     
-      <button
-        onClick={() => {
-        navigate('/about')
-        }}
-      >
-      Oil
-      </button>
-    </li>
-    <li
-      
-      className="flex justify-center items-center gap-3 cursor-pointer text-lg hover:text-emerald-400 transition"
-    >
-     
-      <button
-        onClick={() => {
-        navigate('/about')
-        }}
-      >
-      Ghee
-      </button>
-    </li>
-</ul>
+        {/* Menu List */}
+        <ul style={{ listStyle: "none", padding: "32px 24px 0", margin: 0 }}>
+          <li style={{ marginBottom: "24px", textAlign: "center" }}>
+            <button className="hover:text-emerald-400" onClick={() => navigate("/bluetea")}>
+              Blue Tea
+            </button>
+          </li>
 
+          <li style={{ marginBottom: "24px", textAlign: "center" }}>
+            <button className="hover:text-emerald-400" onClick={() => navigate("/moringatea")}>
+              Moringa Tea
+            </button>
+          </li>
+
+          <li style={{ marginBottom: "24px", textAlign: "center" }}>
+            <button className="hover:text-emerald-400" onClick={() => navigate("/hibiscustea")}>
+              Hibiscus Tea
+            </button>
+          </li>
+
+          <li style={{ marginBottom: "24px", textAlign: "center" }}>
+            <button className="hover:text-emerald-400" onClick={() => navigate("/hibiscusjuice")}>
+              Hibiscus Juice
+            </button>
+          </li>
+
+          <li style={{ marginBottom: "24px", textAlign: "center" }}>
+            <button className="hover:text-emerald-400" onClick={() => navigate("/fish")}>
+              Fish
+            </button>
+          </li>
+        </ul>
+
+        {/* Home Button Bottom */}
+       <div
+  style={{
+    position: "absolute",
+    bottom: 10,
+    width: "100%",
+    padding: "50px 24px",   
+    borderTop: "1px solid rgb(55 65 81)",
+    textAlign: "center",
+  }}
+>
+  <ul style={{ listStyle: "none", padding: 0 }}>
+    <li style={{ marginBottom: "20px" }}>    {/* extra spacing */}
+      <button
+        className="text-lg hover:text-emerald-400"
+        onClick={() => navigate("/")}
+      >
+        Home
+      </button>
+    </li>
+              
+    <li>
+      <button
+        className="text-lg hover:text-emerald-400"
+        onClick={() => navigate("/about")}
+      >
+        About Us
+      </button>
+    </li>
+  </ul>
+</div>
+    
+     
       </div>
     </>
   );

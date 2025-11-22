@@ -26,7 +26,7 @@ const Footer = () => {
               navigate("/about");
             }}>About Us</button></li>
             <li className="hover:text-emerald-400 transition-all cursor-pointer"><button>Settings</button></li>
-            <li className="hover:text-emerald-400 transition-all cursor-pointer">Gallery</li>
+            
           </ul>
         </div>
 
@@ -34,10 +34,22 @@ const Footer = () => {
         <div>
           <h2 className="text-lg font-semibold text-white mb-3">Products</h2>
           <ul className="space-y-2 text-sm">
-            <li className="hover:text-emerald-400 transition-all cursor-pointer">Blog</li>
-            <li className="hover:text-emerald-400 transition-all cursor-pointer">Newsletter</li>
-            <li className="hover:text-emerald-400 transition-all cursor-pointer">Research</li>
-            <li className="hover:text-emerald-400 transition-all cursor-pointer">Support</li>
+            <li className="hover:text-emerald-400 transition-all cursor-pointer"><button onClick={()=>{
+              navigate("/milk");
+            }}>Milk</button></li>
+            <li className="hover:text-emerald-400 transition-all cursor-pointer"><button onClick={()=>{
+              navigate("/honey");
+            }}>Honey</button></li>
+            <li className="hover:text-emerald-400 transition-all cursor-pointer"><button onClick={()=>{
+              navigate("/fish");
+            }}>Fish</button></li>
+            <li className="hover:text-emerald-400 transition-all cursor-pointer"><button 
+            onClick={()=>{
+              navigate("/oil");
+            }}>Oil</button></li>
+            <li className="hover:text-emerald-400 transition-all cursor-pointer"><button onClick={()=>{
+              navigate("/ghee");
+            }}>Ghee</button></li>
           </ul>
         </div>
 
