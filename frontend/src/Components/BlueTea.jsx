@@ -1,10 +1,11 @@
 import React from 'react'
-import MilkBackground from "../assets/bluetea.png";
+import MilkBackground from "../assets/Aparajita Tea.jpg";
 import { motion } from "framer-motion";
 import Dropdown from './Dropdown';
 import BlueTeaP from "../assets/BlueTeaProcess.jpg";
 import BlueTeaMarket from "../assets/BlueTeaMarket.jpg";
 import Aparajita from "../assets/Aparajita.jpg";
+
 const BlueTea = () => {
   const content = [
     {
@@ -90,7 +91,7 @@ const BlueTea = () => {
         <img
           src={MilkBackground}
           alt="Blue Tea"
-          className="w-64 md:w-80 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+          className="w-64 md:w-70 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
         />
 
         <div className="w-full">
