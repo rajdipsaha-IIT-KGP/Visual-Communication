@@ -14,6 +14,7 @@ const BlueTea = () => {
         <>
           In the regions of the Indian <b className="font-bold">Sundarbans</b>, <b className="font-bold">Butterfly Pea</b> plant, locally known as <b className="font-bold">Aparajita</b>, has long flourished as wild and untamed. Traditionally, the flower was used for <b className="font-bold">rituals</b> and <b className="font-bold">natural dyeing</b>, but not as a beverage. The idea of brewing <b className="font-bold">Aparajita</b> into <b className="font-bold">Blue Tea</b> arrived recently during a field school visit, when a professor from the <b className="font-bold">University of Waterloo</b> shared its <b className="font-bold">nutritional</b> and <b className="font-bold">economic potential</b>. A hands-on workshop conducted by <b className="font-bold">Utsav</b> trained local communities to naturally process and prepare the flowers into tea. Today, this small experiment stands as a symbol of <b className="font-bold">innovation</b>, where local knowledge and global learning meet to create new <b className="font-bold">livelihoods</b> rooted in <b className="font-bold">sustainability</b>.
           <div className='flex justify-center'><img src={Aparajita} alt="Aparajita Flower" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+          <b className=' flex justify-center'>Aparajita Flower</b>
         </>
       )
     },
@@ -23,6 +24,7 @@ const BlueTea = () => {
         <>
           The process begins by carefully plucking the <b className="font-bold">Aparajita flowers</b>, each handpicked. Petals are gently washed and laid out to dry in the sun over two to three days. After drying, they are stored in <b className="font-bold">airtight aluminium containers</b> to preserve them. This process is avoided during <b className="font-bold">monsoon</b>, when humidity and rain make drying difficult. Finally, the tea is packaged by <b className="font-bold">local women</b>, adding care and craftsmanship to every batch.
           <div className='flex justify-center'><img src={BlueTeaP} alt="Blue Tea" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+           <b className=' flex justify-center'>Sun Dried Aparajita Flower</b>
           
         </>
       )
@@ -41,6 +43,7 @@ const BlueTea = () => {
         <>
           Cultivating <b className="font-bold">Blue Tea</b> offers <b className="font-bold">small and landless farmers</b> an alternative, <b className="font-bold">climate-resilient income source</b> on <b className="font-bold">saline soils</b>. Through local cooperatives like the <b className="font-bold">Farmers Producer Company (FPC)</b>, farmers can connect to <b className="font-bold">urban market chains</b>.
            <div className='flex justify-center'><img src={BlueTeaMarket} alt="Blue Tea" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+           
         </>
       )
     },
