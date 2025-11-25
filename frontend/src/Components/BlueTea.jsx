@@ -1,10 +1,11 @@
 import React from 'react'
-import MilkBackground from "../assets/Aparajita Tea.jpg";
+import MilkBackground from "../assets/Aparajita Tea3.jpg";
 import { motion } from "framer-motion";
 import Dropdown from './Dropdown';
 import BlueTeaP from "../assets/BlueTeaProcess.jpg";
 import BlueTeaMarket from "../assets/BlueTeaMarket.jpg";
 import Aparajita from "../assets/Aparajita.jpg";
+
 
 const BlueTea = () => {
   const content = [
