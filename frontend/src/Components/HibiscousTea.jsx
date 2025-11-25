@@ -2,7 +2,9 @@ import React from 'react'
 import MilkBackground from "../assets/HibiscousTea.png";
 import { motion } from "framer-motion";
 import Dropdown from './Dropdown';
-
+import History from   "../assets/Red Hibiscus flowers.jpg";
+import HibiscousProcess from  "../assets/HibiscousProcess.jpg";
+import Packaging from  "../assets/Packed Hibiscus Tea.jpg";
 const HibiscousTea = () => {
    const content = [
     {
@@ -10,6 +12,7 @@ const HibiscousTea = () => {
       description: (
         <>
           During one of the field visits to <b className="font-bold">Sundarban Bari</b> in <b className="font-bold">Kumirmari</b>, parents of <b className="font-bold">Dr Anuradha Choudry</b> observed the abundant, naturally blooming <b className="font-bold">hibiscus plants</b> thriving across the landscape. Recognizing their <b className="font-bold">nutritional</b> and <b className="font-bold">medicinal potential</b>, Dr Choudry’s mother encouraged the local community to explore new ways of using these flowers, particularly by preparing <b className="font-bold">hibiscus tea</b> and juice. What began as a simple suggestion soon evolved into a local practice that combined <b className="font-bold">tradition, health awareness</b>, and <b className="font-bold">sustainable enterprise</b>.
+          <div className='flex justify-center'><img src={History} alt="Hibiscous Tea" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
         </>
       )
     },
@@ -18,6 +21,7 @@ const HibiscousTea = () => {
       description: (
         <>
           The process begins with the careful selection of freshly bloomed <b className="font-bold">hibiscus petals</b>, allowing them to dry under the sun. Once dried, they are stored in <b className="font-bold">airtight containers</b> to preserve their <b className="font-bold">colour, shelf life</b> and <b className="font-bold">nutritional value</b>. When soaked in hot water, the petals release a <b className="font-bold">brilliant ruby-red infusion</b> that is <b className="font-bold">tangy, aromatic</b>, and rich in <b className="font-bold">vitamin C</b>.
+          <div className='flex justify-center'><img src={HibiscousProcess} alt="Hibiscous Tea" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
         </>
       )
     },
@@ -34,6 +38,7 @@ const HibiscousTea = () => {
       description: (
         <>
           The growing popularity of <b className="font-bold">herbal teas</b> has opened new <b className="font-bold">market opportunities</b> for <b className="font-bold">small-scale producers</b>. Through <b className="font-bold">training</b> and local <b className="font-bold">branding initiatives</b>, community members are now able to earn steady incomes by connecting their <b className="font-bold">hibiscus products</b> to regional and urban <b className="font-bold">wellness markets</b>, mostly mediated through the <b className="font-bold">Farmers Producer Company (FPC)</b> networks.
+          <div className='flex justify-center'><img src={Packaging} alt="Hibiscous Tea" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
         </>
       )
     },

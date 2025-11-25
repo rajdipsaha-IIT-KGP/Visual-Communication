@@ -2,7 +2,9 @@ import React from 'react'
 import MilkBackground from "../assets/MornigaTea.png";
 import { motion } from "framer-motion";
 import Dropdown from './Dropdown';
-
+import Process from  "../assets/MornigaTeaProcess.jpg";
+import History from  "../assets/Moringa leaves.jpg";
+import Packaging from  "../assets/Mornigapacking.jpg";
 const Moringa = () => {
    const content = [
     {
@@ -10,6 +12,8 @@ const Moringa = () => {
       description: (
         <>
           The idea of processing Moringa Tea at Sundarban Bari emerged through a close collaboration with the <b className="font-bold">Farmers Producer Company (FPC)</b>. During one such interaction, a member shared insights about the <b className="font-bold">growing market demand</b> for moringa leaves. This simple exchange of information and encouragement inspired <b className="font-bold">Tapash da</b> and the local community to begin large-scale <b className="font-bold">drying and processing</b> of moringa leaves.
+          <div className='flex justify-center'><img src={History} alt="Moringa Leaves" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+          <b className='flex justify-center'>Morniga Leaves</b>
         </>
       )
     },
@@ -18,6 +22,8 @@ const Moringa = () => {
       description: (
         <>
           Fresh <b className="font-bold">moringa leaves</b> are carefully harvested, cleaned, and dried to preserve their <b className="font-bold">rich green colour</b> and <b className="font-bold">nutritional value</b>. Once fully dried, the leaves are gently <b className="font-bold">crushed or powdered</b> and packed for <b className="font-bold">tea</b> and other dietary uses. This simple, <b className="font-bold">low-energy process</b> supports sustainable production while retaining the natural goodness of moringa.
+          <div className='flex justify-center'><img src={Process} alt="Moringa Leaves" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+          <b className='flex justify-center'>Morniga powder from the morniga leaves</b>
         </>
       )
     },
@@ -34,6 +40,7 @@ const Moringa = () => {
       description: (
         <>
           <b className="font-bold">Moringa cultivation</b> and tea processing create <b className="font-bold">sustainable livelihood opportunities</b> for <b className="font-bold">marginal farmers</b> in saline and flood-prone areas, like the Indian Sundarbans. With increasing awareness of its <b className="font-bold">health benefits</b>, Moringa connects local producers to <b className="font-bold">national health-food markets</b>.
+           <div className='flex justify-center'><img src={Packaging} alt="Moringa Leaves" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
         </>
       )
     },
@@ -76,7 +83,7 @@ const Moringa = () => {
         transition={{ duration: 1 }}
       >
         <h1 className="text-5xl md:text-6xl font-extrabold mb-8 text-white">
-          MORNIGA TEA
+          MORINGA TEA
         </h1>
 
         {/* Milk image just above the paragraph */}
