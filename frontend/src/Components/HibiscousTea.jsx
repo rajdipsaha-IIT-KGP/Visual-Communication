@@ -5,7 +5,11 @@ import Dropdown from './Dropdown';
 import History from   "../assets/Red Hibiscus flowers.jpg";
 import HibiscousProcess from  "../assets/HibiscousProcess.jpg";
 import Packaging from  "../assets/Packed Hibiscus Tea.jpg";
+import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 const HibiscousTea = () => {
+  const navigate = useNavigate();
    const content = [
     {
       name: "History and Context",
@@ -104,6 +108,17 @@ const HibiscousTea = () => {
           ))}
         </div>
       </motion.div>
+      <div className="w-full flex justify-end mt-10 z-20">
+        <button
+          onClick={() => navigate("/hibiscusjuice")}
+          className="flex items-center gap-2 underline decoration-white text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+        >
+          Hibiscus Juice
+          <span className="underline decoration-white">
+            <FontAwesomeIcon icon={faCaretRight} />
+          </span>
+        </button>
+      </div>
     </div>
   )
 }
