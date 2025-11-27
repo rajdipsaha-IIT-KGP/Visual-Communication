@@ -66,8 +66,8 @@ const Footer = () => {
         <div>
           <h2 className="text-lg font-semibold text-white mb-3">Contact</h2>
           <ul className="text-sm space-y-2">
-            <li>Email: info@ecoplanet.org</li>
-            <li>Phone: +91 98765 43210</li>
+            <li>Email: rajdipsaha7697@gmail.com</li>
+            <li>Phone: +91 7908570476</li>
             <li>Location: IIT Kharagpur, India</li>
           </ul>
         </div>
