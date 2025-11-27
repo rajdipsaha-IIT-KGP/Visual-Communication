@@ -4,8 +4,10 @@ import Dropdown from './Dropdown';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
-
-
+import HoneyImage from "../assets/Honey.jpg";
+import Honeyproduction from "../assets/Honeyproduction.jpg";
+import Honeyhistory from "../assets/Honeyhistory.jpg";
+import Honeygender from "../assets/Honeygender.jpg";
 // import HoneyImage from "../assets/...";
 
 const Honey = () => {
@@ -24,6 +26,8 @@ const Honey = () => {
           Despite these restrictions, honey remains an important source of
           livelihood, supported by generations of specialized knowledge that
           enables sustainable collection within this tight timeframe.
+            <div className='flex justify-center'><img src={Honeyhistory} alt="Honey History" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+            <b className='flex justify-center'>Beekeeping in Sunderbans</b>
         </>
       )
     },
@@ -39,6 +43,8 @@ const Honey = () => {
           legal access to core forest zones. All registered collectors are also
           members of the <b className="font-bold">Sundarban-Fed Honey Natural Product Farmers Company</b>,
           ensuring livelihood support and structured market linkages.
+            <div className='flex justify-center'><img src={Honeyproduction} alt="Honey Production" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+            <b className=' flex justify-center'>Honey Collection in Sunderbans</b>
         </>
       )
     },
@@ -67,6 +73,8 @@ const Honey = () => {
           honey has strong potential across <b className="font-bold">organic</b> and
           <b className="font-bold"> fair-trade markets</b>, increasing income security for
           forest-dependent communities.
+          <div className='flex justify-center'><img src={HoneyImage} alt="Honey Production" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+            <b className=' flex justify-center'>Honey As a Final Product</b>
         </>
       )
     },
@@ -79,6 +87,9 @@ const Honey = () => {
           <b className="font-bold"> honey processing</b>. This diversification not only reduces
           direct dependence on the forest but also creates alternative income
           streams, fostering greater <b className="font-bold">gender empowerment</b>.
+            <div className='flex justify-center'><img src={Honeygender} alt="Honey  
+Gender" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+            <b className=' flex justify-center'>Women Empowerment in Honey Collection</b>
         </>
       )
     },
@@ -126,7 +137,7 @@ const Honey = () => {
         </h1>
 
        
-        {/* <img src={HoneyImage} alt="Wild Honey" className="w-64 md:w-80 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500" /> */}
+        <img src={HoneyImage} alt="Wild Honey" className="w-50 md:w-50 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500" />
 
         <div className="w-full">
           {content.map((item, index) => (

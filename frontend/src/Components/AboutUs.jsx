@@ -5,7 +5,7 @@ const AboutUs = () => {
   const sections = [
     {
       title: "Who We Are",
-      description: "We are Rajdip and Rhitoridhha, two passionate students creating a web experience to showcase Sundarban’s rich cultural and natural products. Through this project, we aim to tell the story of how local communities live, work, and sustain their unique way of life."
+      description: "We are Rajdip and Rhita Rhiddha, two passionate students creating a web experience to showcase Sundarban’s rich cultural and natural products. Through this project, we aim to tell the story of how local communities live, work, and sustain their unique way of life."
     },
     {
       title: "Our Mission",

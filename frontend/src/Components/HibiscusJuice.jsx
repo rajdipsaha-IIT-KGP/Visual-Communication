@@ -5,7 +5,8 @@ import Dropdown from './Dropdown';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
-
+import juiceprocess from "../assets/Juicepro.jpg";
+import juiceprdct from "../assets/juiceproduct.webp";
 const HibiscousJuice = () => {
 const navigate = useNavigate();
   const content = [
@@ -22,6 +23,8 @@ const navigate = useNavigate();
       description: (
         <>
           The process begins with careful selection of <b className="font-bold">fresh hibiscus flowers</b>. The petals are gently cleaned and then soaked in <b className="font-bold">lemon water for 3–4 hours</b> to extract their <b className="font-bold">natural colour</b> and <b className="font-bold">nutritional components</b>. The concentrate is blended with water and a locally sourced <b className="font-bold">natural sweetener (honey)</b> to create a refreshing drink. Once <b className="font-bold">filtered</b> and <b className="font-bold">cooled</b>, the juice is <b className="font-bold">bottled</b> and sealed, ready to be consumed or sold in local markets.
+                    <div className='flex justify-center'><img src={juiceprocess} alt="Hibiscous Tea" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+                     <b className=' flex justify-center'>Filteration Of Hibiscus Juice</b>
         </>
       )
     },
@@ -38,6 +41,8 @@ const navigate = useNavigate();
       description: (
         <>
           By transforming fresh hibiscus flowers into a <b className="font-bold">value-added beverage</b>, small producers have diversified their income beyond seasonal farming. The juice is now sold in <b className="font-bold">local fairs</b> and <b className="font-bold">retail networks in Kolkata</b>, connecting traditional knowledge with modern <b className="font-bold">health-conscious markets</b>.
+          <div className='flex justify-center'><img src={juiceprdct} alt="Hibiscous Tea" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+                     <b className=' flex justify-center'>Bottled Hibiscus Juice</b>
         </>
       )
     },

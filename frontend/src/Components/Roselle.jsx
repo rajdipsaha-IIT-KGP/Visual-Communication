@@ -4,7 +4,9 @@ import Dropdown from './Dropdown';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
-
+import RoselleImage from "../assets/Roselle .jpg";
+import Rosellpro from "../assets/Rosellepro.jpg";
+import Rosellpickle from "../assets/Rosellepickle .jpg";
 const Roselle = () => {
   const navigate = useNavigate();
 
@@ -36,6 +38,22 @@ const Roselle = () => {
       )
     },
     {
+         name: "Production process",
+        description: (
+            <>
+            <b>Bengali-Style Roselle Chutney (Chukurer Chutney)</b> Method
+The focus in Bengal is typically on the sweet and sour balance, often using jaggery as the sweetener. <br /><br />
+<b>Preparation</b>: The red calyces are separated from the central seed pod and washed thoroughly.
+Cooking: The calyces are boiled with a little water until they soften and turn mushy. Sugar or jaggery is added to balance the natural tartness, and the mixture is cooked down to a chutney consistency. <br />
+<br />
+<b>Tempering (optional)</b>: Some recipes may incorporate a light tempering of panch phoron (a five-spice blend of fenugreek, nigella, cumin, mustard, and fennel seeds) in mustard oil for an aromatic finish typical of Bengali cuisine.
+Storage: The cooled chutney is stored in clean, dry glass jars.
+            <div className='flex justify-center'><img src={Rosellpro} alt="Roselle Production" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+            <b className=' flex justify-center'>Roselle Fruits used For Making Roselle Pickle</b>
+            </>
+            )
+    },
+    {
       name: "Grassroots and local mobilization",
       description: (
         <>
@@ -56,6 +74,8 @@ const Roselle = () => {
           <b className="font-bold"> livelihood opportunities</b> for marginal farmers, especially 
           those with <b className="font-bold">limited or no land</b> in 
           <b className="font-bold"> saline and flood-prone areas</b> of the Indian Sundarbans.
+          <div className='flex justify-center'><img src={Rosellpickle} alt="Roselle Production" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+            <b className=' flex justify-center'>Rosell Pickle Packed</b>
         </>
       )
     },
@@ -94,8 +114,10 @@ const Roselle = () => {
         transition={{ duration: 1 }}
       >
         <h1 className="text-5xl md:text-6xl font-extrabold mb-8 text-white">
-          ROSELLE PICKLE
+          ROSELLE 
         </h1>
+
+        <img src={RoselleImage} alt="Wild Honey" className="w-50 md:w-50 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500" />
 
         <div className="w-full">
           {content.map((item, index) => (

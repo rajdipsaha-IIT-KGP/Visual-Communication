@@ -4,7 +4,9 @@ import Dropdown from './Dropdown';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
-
+import BoriImage from "../assets/Bori.jpg";
+import Borigender from "../assets/Borigender.jpg";
+import AshGourd from "../assets/Ash gourd.jpg";
 // ⚠️ Add your image later:
 // import BoriImage from "../assets/...";
 
@@ -53,6 +55,8 @@ const BoriPage = () => {
           Bori making is <b className="font-bold">labour-intensive</b> and primarily undertaken by
           women. Among them, <b className="font-bold">Shobha di, Ujjala di, Sagarika di, and Sudha
           Kakima</b> are active members who keep this tradition alive.
+          <div className='flex justify-center'><img src={AshGourd} alt="Bori Gender" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+            <b className=' flex justify-center'>Ash Gourd</b>
         </>
       ),
     },
@@ -87,6 +91,8 @@ const BoriPage = () => {
           heritage and <b className="font-bold">women’s entrepreneurship</b>. As more women engage
           in production, packaging, and marketing, Bori making strengthens their
           economic agency and role in local value chains.
+            <div className='flex justify-center'><img src={Borigender} alt="Bori Gender" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+            <b className=' flex justify-center'>Women Empowerment in Bori Making</b>
         </>
       ),
     },
@@ -132,7 +138,7 @@ const BoriPage = () => {
         </h1>
 
      
-        {/* <img src={BoriImage} alt="Bori" className="w-64 md:w-80 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500" /> */}
+        <img src={BoriImage} alt="Bori" className="w-50 md:w-50 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500" />
 
         <div className="w-full">
           {content.map((item, index) => (

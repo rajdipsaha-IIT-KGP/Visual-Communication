@@ -5,6 +5,8 @@ import Dropdown from './Dropdown';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import Fishproduction from "../assets/Fishproduction.jpg";
+import Fishmarket from "../assets/Fishmarket.jpg";
 const Fish = () => {
   const navigate = useNavigate();
 
@@ -32,6 +34,8 @@ const Fish = () => {
           The <b className="font-bold">41 participating households</b> collectively monitor the canal, ensuring fish health and maintaining the <b className="font-bold">overall canal ecosystem</b>.  
 
           This approach integrates <b className="font-bold">traditional knowledge</b> with <b className="font-bold">scientific guidance</b> to support sustainable fish production while preserving ecological balance.
+          <div className='flex justify-center'><img src={Fishproduction} alt="Fish Production" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+          <b className=' flex justify-center'>Aquaculture in Sunderbans</b>
         </>
       )
     },
@@ -52,10 +56,12 @@ const Fish = () => {
       description: (
         <>
           Fishing remains a major source of <b className="font-bold">food security</b> and <b className="font-bold">livelihood</b> in the Sundarbans.  
-
+<br />
           Freshly harvested fish can be sold in <b className="font-bold">Kumirmari local markets</b>, and through <b className="font-bold">cold-chain networks</b>, transported to <b className="font-bold">Dhamakhali</b> or Kolkata wholesale markets.  
-
+<br />
           This strengthens market access and enhances income stability for local communities.
+          <div className='flex justify-center'><img src={Fishmarket} alt="Fish Market" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
+          <b className=' flex justify-center'>Fish Market in Sundarban</b>
         </>
       )
     },
