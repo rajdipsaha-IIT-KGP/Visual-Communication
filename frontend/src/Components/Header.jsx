@@ -85,6 +85,21 @@ const Header = () => {
               Fish
             </button>
           </li>
+          <li style={{ marginBottom: "24px", textAlign: "center" }}>
+            <button className="hover:text-emerald-400" onClick={() => navigate("/honey")}>
+              Honey
+            </button>
+          </li>
+          <li style={{ marginBottom: "24px", textAlign: "center" }}>
+            <button className="hover:text-emerald-400" onClick={() => navigate("/bori")}>
+              Bori
+            </button>
+          </li>
+          <li style={{ marginBottom: "24px", textAlign: "center" }}>
+            <button className="hover:text-emerald-400" onClick={() => navigate("/roselle")}>
+              Roselle
+            </button>
+          </li>
         </ul>
 
         {/* Home Button Bottom */}

@@ -10,7 +10,11 @@ import HibiscousTea from "./Components/HibiscousTea";
 import AboutUs from "./Components/AboutUs";
 import HibiscousJuice from "./Components/HibiscusJuice";
 import Fish from "./Components/Fish";
+import Honey from "./Components/Honey";
+import Bori from "./Components/Bori";
+import Roselle from "./Components/Roselle";
 import Error from "./Components/Error";
+
 const App = () => {
   return (
     <Router>
@@ -44,6 +48,9 @@ const App = () => {
               <Route path="/about" element={<AboutUs />} />
               <Route path="/hibiscusjuice" element={<HibiscousJuice />} />
               <Route path="/fish" element={<Fish />} />
+              <Route path="/honey" element={<Honey />} />
+              <Route path="/bori" element={<Bori />} />
+              <Route path="/roselle" element={<Roselle />} />
               <Route path="*" element={<Error />} />
             </Routes>
           </main>

@@ -50,6 +50,15 @@ const Footer = () => {
             <li className="hover:text-emerald-400 transition-all cursor-pointer"><button onClick={()=>{
               navigate("/hibiscusjuice");
             }}>Hibiscous Juice</button></li>
+            <li className="hover:text-emerald-400 transition-all cursor-pointer"><button onClick={()=>{
+              navigate("/honey");
+            }}>Honey</button></li>
+               <li className="hover:text-emerald-400 transition-all cursor-pointer"><button onClick={()=>{
+              navigate("/bori");
+            }}>Bori</button></li>
+            <li className="hover:text-emerald-400 transition-all cursor-pointer"><button onClick={()=>{
+              navigate("/roselle");
+            }}>Roselle</button></li>
           </ul>
         </div>
 
