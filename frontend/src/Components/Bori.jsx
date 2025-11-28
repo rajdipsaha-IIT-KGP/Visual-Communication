@@ -75,7 +75,7 @@ const BoriPage = () => {
       alt="Dal" 
       className="w-full md:w-50 h-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
     />
-    <p className="text-center text-sm font-semibold">Dal Paste</p>
+    <p className="text-center text-sm font-semibold">Moong Dal Grains</p>
   </div>
 
   
@@ -85,7 +85,7 @@ const BoriPage = () => {
       alt="Plant" 
       className="w-full md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
     />
-    <p className="text-center text-sm font-semibold">Sun-Drying Setup</p>
+    <p className="text-center text-sm font-semibold">Moong Dal Plant</p>
   </div>
 
 </div>
