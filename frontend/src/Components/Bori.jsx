@@ -9,8 +9,7 @@ import Borigender from "../assets/Borigender.jpg";
 import AshGourd from "../assets/Ash gourd.jpg";
 import dal from "../assets/dal.jpg";
 import plant from "../assets/plant.webp";
-// ⚠️ Add your image later:
-// import BoriImage from "../assets/...";
+
 
 const BoriPage = () => {
   const navigate = useNavigate();
@@ -59,7 +58,7 @@ const BoriPage = () => {
           Kakima</b> are active members who keep this tradition alive.
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
   
-  {/* IMAGE 1 */}
+  
   <div className="flex flex-col items-center">
     <img 
       src={AshGourd} 
@@ -69,7 +68,7 @@ const BoriPage = () => {
     <p className="text-center text-sm font-semibold">Ash Gourd</p>
   </div>
 
-  {/* IMAGE 2 */}
+
   <div className="flex flex-col items-center">
     <img 
       src={dal} 
@@ -79,7 +78,7 @@ const BoriPage = () => {
     <p className="text-center text-sm font-semibold">Dal Paste</p>
   </div>
 
-  {/* IMAGE 3 */}
+  
   <div className="flex flex-col items-center">
     <img 
       src={plant} 
