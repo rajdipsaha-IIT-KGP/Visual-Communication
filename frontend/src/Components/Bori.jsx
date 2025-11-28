@@ -7,6 +7,8 @@ import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import BoriImage from "../assets/Bori.jpg";
 import Borigender from "../assets/Borigender.jpg";
 import AshGourd from "../assets/Ash gourd.jpg";
+import dal from "../assets/dal.jpg";
+import plant from "../assets/plant.webp";
 // ⚠️ Add your image later:
 // import BoriImage from "../assets/...";
 
@@ -55,8 +57,41 @@ const BoriPage = () => {
           Bori making is <b className="font-bold">labour-intensive</b> and primarily undertaken by
           women. Among them, <b className="font-bold">Shobha di, Ujjala di, Sagarika di, and Sudha
           Kakima</b> are active members who keep this tradition alive.
-          <div className='flex justify-center'><img src={AshGourd} alt="Bori Gender" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
-            <b className=' flex justify-center'>Ash Gourd</b>
+          <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+  
+  {/* IMAGE 1 */}
+  <div className="flex flex-col items-center">
+    <img 
+      src={AshGourd} 
+      alt="Ash Gourd" 
+      className="w-full md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+    />
+    <p className="text-center text-sm font-semibold">Ash Gourd</p>
+  </div>
+
+  {/* IMAGE 2 */}
+  <div className="flex flex-col items-center">
+    <img 
+      src={dal} 
+      alt="Dal" 
+      className="w-full md:w-50 h-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+    />
+    <p className="text-center text-sm font-semibold">Dal Paste</p>
+  </div>
+
+  {/* IMAGE 3 */}
+  <div className="flex flex-col items-center">
+    <img 
+      src={plant} 
+      alt="Plant" 
+      className="w-full md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+    />
+    <p className="text-center text-sm font-semibold">Sun-Drying Setup</p>
+  </div>
+
+</div>
+
+            
         </>
       ),
     },
