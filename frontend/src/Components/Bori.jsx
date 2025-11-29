@@ -11,7 +11,7 @@ import AshGourd from "../assets/Ash gourd.jpg";
 import dal from "../assets/dal.jpg";
 import plant from "../assets/plant.webp";
 
-// Full-page background image
+
 import BoriBg from "../assets/boribg.jpeg";
 
 const BoriPage = () => {
@@ -191,7 +191,7 @@ const BoriPage = () => {
             <div className="w-full flex justify-end mt-4 z-20">
               <button
                 onClick={() => navigate("/roselle")}   // button content as before
-                className="flex items-center gap-2 underline decoration-white text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+                className="lex items-center gap-2 underline decoration-white font-semibold rounded-xl shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer text-black bg-white p-3 mb-5"
               >
                 Roselle
                 <span className="underline decoration-white">
