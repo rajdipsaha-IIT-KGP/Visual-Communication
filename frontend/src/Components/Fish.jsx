@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import FishBG from "../assets/Fish.jpeg";  
+import FishBG1 from "../assets/Fish.png";  
 import Fishproduction from "../assets/Fishproduction.jpg";
 import Fishmarket from "../assets/Fishmarket.jpg";
 
@@ -102,7 +103,7 @@ const Fish = () => {
 
         {/* Main Image */}
         <img
-          src={FishBG}
+          src={FishBG1}
           alt="Fishing"
           className="w-64 md:w-80 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 bg-fixed"
         />
