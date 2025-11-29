@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import Background from "../assets/Background.mp4";
 const AboutUs = () => {
   const sections = [
     {
@@ -35,6 +35,14 @@ const AboutUs = () => {
 
       {/* Sections */}
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8">
+        <video
+                className="fixed top-0 left-0 w-full h-full object-cover -z-20"
+                src={Background}
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
         {sections.map((section, index) => (
           <motion.div
             key={index}
@@ -44,8 +52,8 @@ const AboutUs = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
-            <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>
-            <p className="text-gray-200 font-light">{section.description}</p>
+            <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
+            <p className="text-gray-200 font-semibold">{section.description}</p>
           </motion.div>
         ))}
       </div>

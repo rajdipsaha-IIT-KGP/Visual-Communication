@@ -103,7 +103,7 @@ const Roselle = () => {
 
   return (
     <div
-      className="relative w-full min-h-screen text-white bg-cover bg-center"
+      className="relative w-full min-h-screen text-white bg-cover bg-center bg-fixed"
       style={{ backgroundImage: `url(${RoselleBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       {/* Scrollable overlay */}

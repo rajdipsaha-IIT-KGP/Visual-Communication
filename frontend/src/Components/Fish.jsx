@@ -104,7 +104,7 @@ const Fish = () => {
         <img
           src={FishBG}
           alt="Fishing"
-          className="w-64 md:w-80 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+          className="w-64 md:w-80 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 bg-fixed"
         />
 
         <div className="w-full">
