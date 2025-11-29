@@ -1,12 +1,15 @@
-import React from 'react';
+import React from "react";
 import { motion } from "framer-motion";
-import Dropdown from './Dropdown';
-import { useNavigate } from 'react-router-dom';
+import Dropdown from "./Dropdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
+
 import RoselleImage from "../assets/Roselle .jpg";
 import Rosellpro from "../assets/Rosellepro.jpg";
 import Rosellpickle from "../assets/Rosellepickle .jpg";
+import RoselleBg from "../assets/Rosell.jpeg"; // Background image like BlueTea
+
 const Roselle = () => {
   const navigate = useNavigate();
 
@@ -27,31 +30,28 @@ const Roselle = () => {
           One characteristic feature of the Roselle plant is its ability to 
           <b className="font-bold"> thrive on infertile land</b> while yielding abundant fruits, 
           making it a <b className="font-bold">resilient and sustainable crop</b> for the region.
-          <br /><br />
-          Roselle pickle has long been intertwined with traditional cultural 
-          practices in the Sundarbans. However, due to limited awareness and 
-          changing lifestyles, this practice gradually declined over the years. 
-          Initiatives and local mobilization like these are now 
-          <b className="font-bold"> reviving roselle cultivation and processing</b>, reconnecting 
-          the community with its cultural and culinary heritage.
         </>
       )
     },
     {
-         name: "Production process",
-        description: (
-            <>
-            <b>Bengali-Style Roselle Chutney (Chukurer Chutney)</b> Method
-The focus in Bengal is typically on the sweet and sour balance, often using jaggery as the sweetener. <br /><br />
-<b>Preparation</b>: The red calyces are separated from the central seed pod and washed thoroughly.
-Cooking: The calyces are boiled with a little water until they soften and turn mushy. Sugar or jaggery is added to balance the natural tartness, and the mixture is cooked down to a chutney consistency. <br />
-<br />
-<b>Tempering (optional)</b>: Some recipes may incorporate a light tempering of panch phoron (a five-spice blend of fenugreek, nigella, cumin, mustard, and fennel seeds) in mustard oil for an aromatic finish typical of Bengali cuisine.
-Storage: The cooled chutney is stored in clean, dry glass jars.
-            <div className='flex justify-center'><img src={Rosellpro} alt="Roselle Production" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
-            <b className=' flex justify-center'>Roselle Fruits used For Making Roselle Pickle</b>
-            </>
-            )
+      name: "Production process",
+      description: (
+        <>
+          <b>Bengali-Style Roselle Chutney (Chukurer Chutney)</b> Method
+          <br /><br />
+          <b>Preparation</b>: The red calyces are separated from the central seed pod and washed thoroughly.
+          <br />
+          <b>Cooking</b>: The calyces are boiled with a little water until they soften and turn mushy. Sugar or jaggery is added to balance the natural tartness, and the mixture is cooked down to a chutney consistency. 
+          <br /><br />
+          <b>Tempering (optional)</b>: Some recipes may incorporate a light tempering of panch phoron in mustard oil for an aromatic finish typical of Bengali cuisine.
+          <br /><br />
+          <b>Storage</b>: The cooled chutney is stored in clean, dry glass jars.
+          <div className="flex justify-center">
+            <img src={Rosellpro} alt="Roselle Production" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"/>
+          </div>
+          <b className='flex justify-center'>Roselle Fruits used For Making Roselle Pickle</b>
+        </>
+      )
     },
     {
       name: "Grassroots and local mobilization",
@@ -59,9 +59,7 @@ Storage: The cooled chutney is stored in clean, dry glass jars.
         <>
           Roselle pickle has long been intertwined with 
           <b className="font-bold"> traditional cultural practices</b> in the Sundarbans. 
-          Due to limited awareness and changing lifestyles, this practice declined 
-          over time. Through <b className="font-bold">initiatives and community mobilization</b>, 
-          roselle cultivation and processing are being revived, reconnecting the 
+          Through <b className="font-bold">community mobilization</b>, roselle cultivation and processing are being revived, reconnecting the 
           community with its cultural and culinary heritage.
         </>
       )
@@ -74,8 +72,10 @@ Storage: The cooled chutney is stored in clean, dry glass jars.
           <b className="font-bold"> livelihood opportunities</b> for marginal farmers, especially 
           those with <b className="font-bold">limited or no land</b> in 
           <b className="font-bold"> saline and flood-prone areas</b> of the Indian Sundarbans.
-          <div className='flex justify-center'><img src={Rosellpickle} alt="Roselle Production" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
-            <b className=' flex justify-center'>Rosell Pickle Packed</b>
+          <div className='flex justify-center'>
+            <img src={Rosellpickle} alt="Roselle Pickle" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"/>
+          </div>
+          <b className='flex justify-center'>Roselle Pickle Packed</b>
         </>
       )
     },
@@ -85,8 +85,7 @@ Storage: The cooled chutney is stored in clean, dry glass jars.
         <>
           Women’s <b className="font-bold">Self-Help Groups (SHGs)</b> play a central role in 
           preparing and preserving traditional food recipes like Roselle pickle. 
-          Their involvement strengthens <b className="font-bold">women’s agency, skills, and economic 
-          empowerment</b>.
+          Their involvement strengthens <b className="font-bold">women’s agency, skills, and economic empowerment</b>.
         </>
       )
     },
@@ -103,51 +102,59 @@ Storage: The cooled chutney is stored in clean, dry glass jars.
   ];
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col justify-center items-center text-center text-white px-8 pt-20">
+    <div
+      className="relative w-full min-h-screen text-white bg-cover bg-center"
+      style={{ backgroundImage: `url(${RoselleBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+    >
+      {/* Scrollable overlay */}
+      <div className="absolute inset-0 bg-black/20">
+        <div className="w-full h-full flex flex-col items-center justify-start pt-20 px-8 overflow-y-auto">
+          <motion.div
+            className="relative z-10 max-w-5xl flex flex-col items-center pb-10"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-8 text-white">
+              ROSELLE
+            </h1>
 
-      <div className="absolute inset-0"></div>
+            <img
+              src={RoselleImage} // Top Roselle image
+              alt="Roselle"
+              className="w-64 md:w-80 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+            />
 
-      <motion.div
-        className="relative z-10 max-w-5xl flex flex-col items-center"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-8 text-white">
-          ROSELLE 
-        </h1>
+            <div className="w-full">
+              {content.map((item, index) => (
+                <Dropdown key={index} title={item.name}>
+                  <p className="text-left text-gray-200 font-normal bg-black/60 p-4 rounded-2xl shadow-lg hover:bg-black/70 transition-all duration-500">
+                    {item.description}
+                  </p>
+                </Dropdown>
+              ))}
+            </div>
 
-        <img src={RoselleImage} alt="Wild Honey" className="w-50 md:w-50 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500" />
-
-        <div className="w-full">
-          {content.map((item, index) => (
-            <Dropdown key={index} title={item.name}>
-              <p className="text-left text-gray-200 font-normal bg-black/60 p-4 rounded-2xl shadow-lg hover:bg-black/70 transition-all duration-500">
-                {item.description}
-              </p>
-            </Dropdown>
-          ))}
-        </div>
-      </motion.div>
-
-      <div className="w-full flex justify-end mt-10 z-20">
-        <button
-  onClick={() => {
+            {/* Navigation button */}
+            <div className="w-full flex justify-end mt-4 z-20">
+              <button
+                onClick={() => {
     window.open(
       "https://docs.google.com/forms/d/e/1FAIpQLSc1f4t3i7Y92yx9MzY6J86cunpfqI-Ir3AUHaQQMMOB64wdUw/viewform?usp=dialog",
       "_blank"
     );
   }}
-  className="flex items-center gap-2 underline decoration-white text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
->
-  Feedback Form
-  <span className="underline decoration-white">
-    <FontAwesomeIcon icon={faCaretRight} />
-  </span>
-</button>
-
+                className="flex items-center gap-2 underline decoration-white font-semibold rounded-xl shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer text-black bg-white p-3 mb-5"
+              >
+                Feedback Form
+                <span className="underline decoration-white">
+                  <FontAwesomeIcon icon={faCaretRight} />
+                </span>
+              </button>
+            </div>
+          </motion.div>
+        </div>
       </div>
-
     </div>
   );
 };

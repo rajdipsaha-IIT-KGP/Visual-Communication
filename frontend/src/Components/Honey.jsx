@@ -8,7 +8,7 @@ import HoneyImage from "../assets/Honey.jpg";
 import Honeyproduction from "../assets/Honeyproduction.jpg";
 import Honeyhistory from "../assets/Honeyhistory.jpg";
 import Honeygender from "../assets/Honeygender.jpg";
-// import HoneyImage from "../assets/...";
+import HoneyBG from "../assets/honeybg.jpeg"; // your honey background
 
 const Honey = () => {
   const navigate = useNavigate();
@@ -26,8 +26,10 @@ const Honey = () => {
           Despite these restrictions, honey remains an important source of
           livelihood, supported by generations of specialized knowledge that
           enables sustainable collection within this tight timeframe.
-            <div className='flex justify-center'><img src={Honeyhistory} alt="Honey History" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
-            <b className='flex justify-center'>Beekeeping in Sunderbans</b>
+          <div className='flex justify-center'>
+            <img src={Honeyhistory} alt="Honey History" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"/>
+          </div>
+          <b className='flex justify-center'>Beekeeping in Sunderbans</b>
         </>
       )
     },
@@ -43,8 +45,10 @@ const Honey = () => {
           legal access to core forest zones. All registered collectors are also
           members of the <b className="font-bold">Sundarban-Fed Honey Natural Product Farmers Company</b>,
           ensuring livelihood support and structured market linkages.
-            <div className='flex justify-center'><img src={Honeyproduction} alt="Honey Production" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
-            <b className=' flex justify-center'>Honey Collection in Sunderbans</b>
+          <div className='flex justify-center'>
+            <img src={Honeyproduction} alt="Honey Production" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"/>
+          </div>
+          <b className='flex justify-center'>Honey Collection in Sunderbans</b>
         </>
       )
     },
@@ -73,8 +77,10 @@ const Honey = () => {
           honey has strong potential across <b className="font-bold">organic</b> and
           <b className="font-bold"> fair-trade markets</b>, increasing income security for
           forest-dependent communities.
-          <div className='flex justify-center'><img src={HoneyImage} alt="Honey Production" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
-            <b className=' flex justify-center'>Honey As a Final Product</b>
+          <div className='flex justify-center'>
+            <img src={HoneyImage} alt="Honey Production" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"/>
+          </div>
+          <b className='flex justify-center'>Honey As a Final Product</b>
         </>
       )
     },
@@ -87,9 +93,10 @@ const Honey = () => {
           <b className="font-bold"> honey processing</b>. This diversification not only reduces
           direct dependence on the forest but also creates alternative income
           streams, fostering greater <b className="font-bold">gender empowerment</b>.
-            <div className='flex justify-center'><img src={Honeygender} alt="Honey  
-Gender" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
-            <b className=' flex justify-center'>Women Empowerment in Honey Collection</b>
+          <div className='flex justify-center'>
+            <img src={Honeygender} alt="Honey Gender" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"/>
+          </div>
+          <b className='flex justify-center'>Women Empowerment in Honey Collection</b>
         </>
       )
     },
@@ -122,46 +129,54 @@ Gender" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 t
   ];
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col justify-center items-center text-center text-white px-8 pt-20">
+    <div
+      className="relative w-full min-h-screen text-white bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: `url(${HoneyBG})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/20"></div>
 
-      <div className="absolute inset-0"></div>
-
-      <motion.div
-        className="relative z-10 max-w-5xl flex flex-col items-center"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-8 text-white">
-          WILD HONEY COLLECTION
-        </h1>
-
-       
-        <img src={HoneyImage} alt="Wild Honey" className="w-50 md:w-50 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500" />
-
-        <div className="w-full">
-          {content.map((item, index) => (
-            <Dropdown key={index} title={item.name}>
-              <p className="text-left text-gray-200 font-normal bg-black/60 p-4 rounded-2xl shadow-lg hover:bg-black/70 transition-all duration-500">
-                {item.description}
-              </p>
-            </Dropdown>
-          ))}
-        </div>
-      </motion.div>
-
-      <div className="w-full flex justify-end mt-10 z-20">
-        <button
-          onClick={() => navigate("/bori")}   // change this route later
-          className="flex items-center gap-2 underline decoration-white text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+      {/* Scrollable content */}
+      <div className="relative z-10 w-full flex flex-col items-center pt-20 px-8 overflow-y-auto">
+        <motion.div
+          className="relative z-10 max-w-5xl flex flex-col items-center pb-10"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
         >
-          Bori
-          <span className="underline decoration-white">
-            <FontAwesomeIcon icon={faCaretRight} />
-          </span>
-        </button>
-      </div>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-8 text-white">
+            WILD HONEY COLLECTION
+          </h1>
 
+          <img
+            src={HoneyImage}
+            alt="Wild Honey"
+            className="w-64 md:w-80 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+          />
+
+          <div className="w-full">
+            {content.map((item, index) => (
+              <Dropdown key={index} title={item.name}>
+                <p className="text-left text-gray-200 font-normal bg-black/60 p-4 rounded-2xl shadow-lg hover:bg-black/70 transition-all duration-500">
+                  {item.description}
+                </p>
+              </Dropdown>
+            ))}
+          </div>
+
+          <div className="w-full flex justify-end mt-4 z-20">
+            <button
+              onClick={() => navigate("/bori")} // update this route
+              className="flex items-center gap-2 underline decoration-white font-semibold rounded-xl shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer text-black bg-white p-3 mb-5"
+            >
+              Bori
+              <span className="underline decoration-white">
+                <FontAwesomeIcon icon={faCaretRight} />
+              </span>
+            </button>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 };

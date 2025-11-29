@@ -1,12 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import Background from "../assets/Background.mp4";
+
 const Home = () => {
   const navigate = useNavigate();
+
   return (
-    <div className="relative w-full min-h-screen flex flex-col justify-center items-center text-center text-white px-8 pt-20">
-      {/* Overlay */}
-      <div className="absolute inset-0"></div>
+    <div className="relative w-full flex flex-col items-center text-center text-white px-8 pt-20 pb-16">
+      {/* Background Video */}
+      <video
+        className="fixed top-0 left-0 w-full h-full object-cover -z-20"
+        src={Background}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+
+      {/* Overlay (lighter) */}
+      <div className="fixed inset-0 bg-black/20 -z-10"></div>
 
       {/* Main Content */}
       <motion.div
@@ -15,7 +28,6 @@ const Home = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        {/* Hero Heading */}
         <motion.h1
           className="text-5xl md:text-6xl font-extrabold mb-8 text-white"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -25,27 +37,23 @@ const Home = () => {
           Discover Sundarban Products
         </motion.h1>
 
-        {/* Hero Description */}
         <motion.p
-          className="text-lg md:text-xl leading-relaxed text-gray-200 font-light bg-black/60 p-6 rounded-2xl shadow-lg hover:bg-black/70 transition-all duration-500"
+          className="text-lg md:text-xl leading-relaxed text-gray-200 font-light bg-black/50 p-6 rounded-2xl shadow-lg hover:bg-black/70 transition-all duration-500"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
-          Explore the <b className="font-semibold">natural and sustainable products</b> of the Sundarbans. From <b className="font-semibold">Moringa Tea</b> to <b className="font-semibold">Hibiscus Tea</b> and <b className="font-semibold">Butterfly Pea Tea</b>, each product reflects <b className="font-semibold">community resilience</b>, <b className="font-semibold">eco-friendly practices</b>, and <b className="font-semibold">wellness</b>.  
+                Explore the <b className="font-semibold">natural and sustainable products</b> of the Sundarbans. From <b className="font-semibold">Moringa Tea</b> to <b className="font-semibold">Hibiscus Tea</b> and <b className="font-semibold">Butterfly Pea Tea</b>, each product reflects <b className="font-semibold">community resilience</b>, <b className="font-semibold">eco-friendly practices</b>, and <b className="font-semibold">wellness</b>.  
           <br /><br />
           These products are crafted with care by local communities, preserving <b className="font-semibold">traditional knowledge</b> while supporting <b className="font-semibold">livelihoods</b>. The cultivation methods emphasize <b className="font-semibold">sustainability</b> and <b className="font-semibold">environmental protection</b>. Every sip of tea or use of a Sundarban product tells a story of <b className="font-semibold">heritage, culture, and nature</b>. By choosing these products, visitors contribute to <b className="font-semibold">empowered communities</b> and a healthier planet.
         </motion.p>
 
-        {/* Call to Action */}
         <motion.button
-          className="mt-8 px-8 py-4 bg-green-600 hover:bg-green-700 rounded-full font-semibold shadow-lg transition-all duration-500 cursor-pointer" 
+          className="mt-8 px-8 py-4 bg-green-600 hover:bg-green-700 rounded-full font-semibold shadow-lg transition-all duration-500 cursor-pointer"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.8, duration: 0.8 }}
-          onClick={()=>{
-          navigate("/bluetea")
-          }}
+          onClick={() => navigate("/bluetea")}
         >
           Explore Products
         </motion.button>
@@ -53,5 +61,6 @@ const Home = () => {
     </div>
   );
 };
+
 
 export default Home;

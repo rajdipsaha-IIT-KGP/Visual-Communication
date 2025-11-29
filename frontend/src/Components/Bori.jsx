@@ -1,15 +1,18 @@
-import React from 'react';
+import React from "react";
 import { motion } from "framer-motion";
-import Dropdown from './Dropdown';
-import { useNavigate } from 'react-router-dom';
+import Dropdown from "./Dropdown";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+
 import BoriImage from "../assets/Bori.jpg";
 import Borigender from "../assets/Borigender.jpg";
 import AshGourd from "../assets/Ash gourd.jpg";
 import dal from "../assets/dal.jpg";
 import plant from "../assets/plant.webp";
 
+// Full-page background image
+import BoriBg from "../assets/boribg.jpeg";
 
 const BoriPage = () => {
   const navigate = useNavigate();
@@ -57,40 +60,33 @@ const BoriPage = () => {
           women. Among them, <b className="font-bold">Shobha di, Ujjala di, Sagarika di, and Sudha
           Kakima</b> are active members who keep this tradition alive.
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-  
-  
-  <div className="flex flex-col items-center">
-    <img 
-      src={AshGourd} 
-      alt="Ash Gourd" 
-      className="w-full md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
-    />
-    <p className="text-center text-sm font-semibold">Ash Gourd</p>
-  </div>
+            <div className="flex flex-col items-center">
+              <img 
+                src={AshGourd} 
+                alt="Ash Gourd" 
+                className="w-full md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+              />
+              <p className="text-center text-sm font-semibold">Ash Gourd</p>
+            </div>
 
+            <div className="flex flex-col items-center">
+              <img 
+                src={dal} 
+                alt="Dal" 
+                className="w-full md:w-50 h-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+              />
+              <p className="text-center text-sm font-semibold">Moong Dal Grains</p>
+            </div>
 
-  <div className="flex flex-col items-center">
-    <img 
-      src={dal} 
-      alt="Dal" 
-      className="w-full md:w-50 h-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
-    />
-    <p className="text-center text-sm font-semibold">Moong Dal Grains</p>
-  </div>
-
-  
-  <div className="flex flex-col items-center">
-    <img 
-      src={plant} 
-      alt="Plant" 
-      className="w-full md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
-    />
-    <p className="text-center text-sm font-semibold">Moong Dal Plant</p>
-  </div>
-
-</div>
-
-            
+            <div className="flex flex-col items-center">
+              <img 
+                src={plant} 
+                alt="Plant" 
+                className="w-full md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+              />
+              <p className="text-center text-sm font-semibold">Moong Dal Plant</p>
+            </div>
+          </div>
         </>
       ),
     },
@@ -125,8 +121,10 @@ const BoriPage = () => {
           heritage and <b className="font-bold">women’s entrepreneurship</b>. As more women engage
           in production, packaging, and marketing, Bori making strengthens their
           economic agency and role in local value chains.
-            <div className='flex justify-center'><img src={Borigender} alt="Bori Gender" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/></div>
-            <b className=' flex justify-center'>Women Empowerment in Bori Making</b>
+          <div className='flex justify-center'>
+            <img src={Borigender} alt="Bori Gender" className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500 "/>
+          </div>
+          <b className='flex justify-center'>Women Empowerment in Bori Making</b>
         </>
       ),
     },
@@ -156,47 +154,54 @@ const BoriPage = () => {
   ];
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col justify-center items-center text-center text-white px-8 pt-20">
+    <div
+      className="relative w-full min-h-screen text-white bg-cover bg-center"
+      style={{ backgroundImage: `url(${BoriBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+    >
+      {/* Scrollable overlay */}
+      <div className="absolute inset-0 bg-black/20">
+        <div className="w-full h-full flex flex-col items-center justify-start pt-20 px-8 overflow-y-auto">
+          <motion.div
+            className="relative z-10 max-w-5xl flex flex-col items-center pb-10"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-8 text-white">
+              DRIED LENTIL DUMPLINGS (BORI)
+            </h1>
 
-      <div className="absolute inset-0"></div>
+            <img
+              src={BoriImage} 
+              alt="Bori" 
+              className="w-64 md:w-80 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+            />
 
-      <motion.div
-        className="relative z-10 max-w-5xl flex flex-col items-center"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-8 text-white">
-         
-     DRIED LENTIL DUMPLINGS (BORI)
-        </h1>
+            <div className="w-full">
+              {content.map((item, index) => (
+                <Dropdown key={index} title={item.name}>
+                  <p className="text-left text-gray-200 font-normal bg-black/60 p-4 rounded-2xl shadow-lg hover:bg-black/70 transition-all duration-500">
+                    {item.description}
+                  </p>
+                </Dropdown>
+              ))}
+            </div>
 
-     
-        <img src={BoriImage} alt="Bori" className="w-50 md:w-50 mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500" />
-
-        <div className="w-full">
-          {content.map((item, index) => (
-            <Dropdown key={index} title={item.name}>
-              <p className="text-left text-gray-200 font-normal bg-black/60 p-4 rounded-2xl shadow-lg hover:bg-black/70 transition-all duration-500">
-                {item.description}
-              </p>
-            </Dropdown>
-          ))}
+            {/* Navigation button (kept as Bori has it) */}
+            <div className="w-full flex justify-end mt-4 z-20">
+              <button
+                onClick={() => navigate("/roselle")}   // button content as before
+                className="flex items-center gap-2 underline decoration-white text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                Roselle
+                <span className="underline decoration-white">
+                  <FontAwesomeIcon icon={faCaretRight} />
+                </span>
+              </button>
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
-
-      <div className="w-full flex justify-end mt-10 z-20">
-        <button
-          onClick={() => navigate("/roselle")}   // change route later
-          className="flex items-center gap-2 underline decoration-white text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
-        >
-          Roselle
-          <span className="underline decoration-white">
-            <FontAwesomeIcon icon={faCaretRight} />
-          </span>
-        </button>
       </div>
-
     </div>
   );
 };
