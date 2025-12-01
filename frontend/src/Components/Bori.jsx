@@ -4,7 +4,7 @@ import Dropdown from "./Dropdown";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
-
+import BoriSundorpro from "../assets/BoriSundorpro.png";
 import BoriImage from "../assets/Bori.jpg";
 import Borigender from "../assets/Borigender.jpg";
 import AshGourd from "../assets/Ash gourd.jpg";
@@ -34,6 +34,14 @@ const BoriPage = () => {
           The practice embodies a fusion of culinary knowledge, ecological
           adaptation, and cultural heritage, sustaining both <b className="font-bold">food
           security</b> and <b className="font-bold">social bonds</b> within local communities.
+          <div className="flex flex-col items-center">
+              <img 
+                src={BoriSundorpro} 
+                alt="Plant" 
+                className="w-full md:w-70 h-70 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+              />
+             
+            </div>
         </>
       ),
     },

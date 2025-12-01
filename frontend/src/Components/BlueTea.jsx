@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import BlueTeabg from "../assets/blueteabg.jpeg";
+import BlueTea1 from "../assets/BlueTea1.mp4"
 
 const BlueTea = () => {
   const navigate = useNavigate();
@@ -58,14 +59,34 @@ const BlueTea = () => {
           difficult. Finally, the tea is
           <b className="font-bold">packaged by local women</b>, adding both care
           and craftsmanship to every batch.
-          <div className="flex justify-center">
-            <img
-              src={BlueTeaP}
-              alt="Blue Tea Process"
-              className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <b className="flex justify-center">Sun Dried Aparajita Flower</b>
+          <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+
+  
+  <div className="flex flex-col items-center">
+    <img
+      src={BlueTeaP}
+      alt="Blue Tea Process"
+      className="w-64 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+    />
+    <b className="text-center">Sun Dried Aparajita Flower</b>
+  </div>
+
+  
+  <div className="flex flex-col items-center">
+    <video
+      src={BlueTea1}
+      className="w-70 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+      autoPlay
+      loop
+      muted
+      playsInline
+    />
+    <b className="text-center">Aparajita Tea Making Process</b>
+  </div>
+
+</div>
+
+          
         </>
       ),
     },
@@ -177,9 +198,10 @@ const BlueTea = () => {
               <div className="w-full">
                 {content.map((item, index) => (
                   <Dropdown key={index} title={item.name}>
-                    <p className="text-left text-gray-200 font-normal bg-black/60 p-4 rounded-2xl shadow-lg hover:bg-black/70 transition-all duration-500">
-                      {item.description}
-                    </p>
+                   <div className="text-left text-gray-200 font-normal bg-black/60 p-4 rounded-2xl shadow-lg hover:bg-black/70 transition-all duration-500">
+  {item.description}
+</div>
+
                   </Dropdown>
                 ))}
               </div>

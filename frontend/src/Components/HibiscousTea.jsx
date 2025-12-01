@@ -8,8 +8,8 @@ import Packaging from "../assets/Packed Hibiscus Tea.jpg";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
-import HibiscusBG from "../assets/hibiscustea-bg.jpeg"; // <-- replace this with your background image
-
+import HibiscusBG from "../assets/hibiscustea-bg.jpeg"; 
+import Hibiscus1 from "../assets/Hibiscus1.png"
 const HibiscousTea = () => {
   const navigate = useNavigate();
 
@@ -80,8 +80,10 @@ const HibiscousTea = () => {
             <img
               src={Packaging}
               alt="Packaging"
-              className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+              className="w-70  md:w-70 h-70 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+              
             />
+            <b className="font-bold">Gender Empowerment in preparing Hibiscus Tea</b>
           </div>
         </>
       ),
@@ -93,6 +95,13 @@ const HibiscousTea = () => {
           Women play a key role in <b className="font-bold">harvesting, drying, and packaging</b>,
           gaining <b className="font-bold">financial independence</b>. Popularity of{" "}
           <b className="font-bold">hibiscus tea</b> enhances women’s participation in value chains.
+          <div className="flex justify-center">
+            <img
+              src={Hibiscus1}
+              alt="Packaging"
+              className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+            />
+          </div>
         </>
       ),
     },
