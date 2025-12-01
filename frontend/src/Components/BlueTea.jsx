@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import BlueTeabg from "../assets/blueteabg.jpeg";
-import BlueTea1 from "../assets/BlueTea2.mp4"
+import BlueTea1 from "../assets/Bluetea2.mp4"
 
 const BlueTea = () => {
   const navigate = useNavigate();
