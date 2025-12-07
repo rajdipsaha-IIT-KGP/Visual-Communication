@@ -13,97 +13,79 @@ const HibiscousJuice = () => {
   const navigate = useNavigate();
 
   const content = [
-    {
-      name: "History and Context",
-      description: (
-        <>
-          During one of the field visits to <b className="font-bold">Sundarban Bari</b> in{" "}
-          <b className="font-bold">Kumirmari</b>, parents of{" "}
-          <b className="font-bold">Dr Anuradha Choudry</b> observed abundant, naturally
-          blooming <b className="font-bold">hibiscus plants</b>. Recognizing their{" "}
-          <b className="font-bold">nutritional</b> and <b className="font-bold">medicinal potential</b>,
-          Dr Choudry’s mother encouraged the local community to explore new ways of
-          using these flowers, particularly by preparing <b className="font-bold">hibiscus tea and juice</b>.
-          <b className="font-bold"> Tradition, health awareness</b>, and{" "}
-          <b className="font-bold">sustainable enterprise</b> were combined, transforming
-          the flower into a source of <b className="font-bold">wellness</b> and{" "}
-          <b className="font-bold">livelihood</b>.
-        </>
-      ),
-    },
-    {
-      name: "Production process",
-      description: (
-        <>
-          The process begins with careful selection of <b className="font-bold">fresh hibiscus flowers</b>. 
-          The petals are cleaned, soaked in <b className="font-bold">lemon water</b> for 3–4 hours to extract their{" "}
-          <b className="font-bold">natural colour and nutrients</b>. The concentrate is blended with water and a locally
-          sourced <b className="font-bold">natural sweetener (honey)</b>, filtered, cooled, and bottled.
-          <div className="flex justify-center">
-            <img
-              src={juiceprocess}
-              alt="Hibiscus Juice Process"
-              className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <b className="flex justify-center">Filtration Of Hibiscus Juice</b>
-        </>
-      ),
-    },
-    {
-      name: "Grassroots and local mobilization",
-      description: (
-        <>
-          <b className="font-bold">Community initiatives</b> introduced hibiscus juice production. Local organizations facilitated{" "}
-          <b className="font-bold">training programs</b> and <b className="font-bold">shared processing facilities</b>, increasing participation,
-          especially among <b className="font-bold">women</b>.
-        </>
-      ),
-    },
-    {
-      name: "Livelihood opportunities and market linkages",
-      description: (
-        <>
-          Transforming fresh hibiscus flowers into a <b className="font-bold">value-added beverage</b> diversifies incomes. 
-          The juice is sold in <b className="font-bold">local fairs</b> and <b className="font-bold">Kolkata retail networks</b>.
-          <div className="flex justify-center">
-            <img
-              src={juiceprdct}
-              alt="Bottled Hibiscus Juice"
-              className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <b className="flex justify-center">Bottled Hibiscus Juice</b>
-        </>
-      ),
-    },
-    {
-      name: "Gender empowerment and agency",
-      description: (
-        <>
-          Women play a key role in <b className="font-bold">harvesting, cleaning, and packaging</b>, gaining{" "}
-          <b className="font-bold">financial independence</b>. Rising demand for <b className="font-bold">herbal drinks</b> enhances their participation in value chains.
-        </>
-      ),
-    },
-    {
-      name: "Nutritional benefits",
-      description: (
-        <>
-          <b className="font-bold">Hibiscus juice</b> supports <b className="font-bold">heart health</b>, aids <b className="font-bold">liver function</b>, 
-          provides <b className="font-bold">antioxidants</b>, regulates <b className="font-bold">blood sugar</b>, supports <b className="font-bold">weight management</b>, and boosts the <b className="font-bold">immune system</b>.
-        </>
-      ),
-    },
-    {
-      name: "Food security (local to global)",
-      description: (
-        <>
-          <b className="font-bold">Hibiscus juice</b> supports <b className="font-bold">local food security</b> and demonstrates how <b className="font-bold">value-added products</b> can scale globally for <b className="font-bold">sustainable nutrition and livelihoods</b>.
-        </>
-      ),
-    },
-  ];
+  {
+    name: "History and Context",
+    description: (
+      <>
+        History and Context: During one of the field visits to Sundarban Bari in Kumirmari, parents of Dr Anuradha Choudry observed the abundant, naturally blooming hibiscus plants thriving across the landscape. Recognizing their nutritional and medicinal potential, Dr Choudry’s mother encouraged the local community to explore new ways of using these flowers, particularly by preparing hibiscus tea and juice. What began as a simple suggestion soon evolved into a local practice that combined tradition, health awareness, and sustainable enterprise. It transformed a common flower into a source of both wellness and livelihood.
+      </>
+    ),
+  },
+  {
+    name: "Production process",
+    description: (
+      <>
+        Production process: The process begins with careful selection of fresh hibiscus flowers. The petals are gently cleaned, then soaked in lemon water for 3-4 hours, to extract their natural colour and nutrition. The concentrate is blended with water and locally sourced natural sweetener (honey) to create a refreshing drink. Once filtered and cooled, the drink is bottled and sealed, ready to be enjoyed or sold in local markets.
+        <div className="flex justify-center">
+          <img
+            src={juiceprocess}
+            alt="Hibiscus Juice Process"
+            className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+        <b className="flex justify-center">Filtration Of Hibiscus Juice</b>
+      </>
+    ),
+  },
+  {
+    name: "Grassroots and local mobilization",
+    description: (
+      <>
+        Grassroots and local mobilization: Community-based initiatives have played a key role in introducing hibiscus juice production, with local organizations facilitating training and shared processing facilities. These efforts have fostered collective learning and participation, especially among women.
+      </>
+    ),
+  },
+  {
+    name: "Livelihood opportunities and market linkages",
+    description: (
+      <>
+        Livelihood opportunities and market linkages: By transforming fresh hibiscus flowers into a value-added beverage, small producers have expanded their income sources beyond seasonal farming. The juice is now sold in local fairs and small retail networks in Kolkata, linking traditional knowledge to emerging health-conscious markets.
+        <div className="flex justify-center">
+          <img
+            src={juiceprdct}
+            alt="Bottled Hibiscus Juice"
+            className="w-50 md:w-50 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+        <b className="flex justify-center">Bottled Hibiscus Juice</b>
+      </>
+    ),
+  },
+  {
+    name: "Gender empowerment and agency",
+    description: (
+      <>
+        Gender empowerment and agency: Just like in hibiscus tea production, Women play a key role in harvesting, drying, and packaging the flowers, thereby gaining financial independence. With the rising demand of herbal drinks in the market, this enhances women’s participation in value chains those traditionally dominated by men.
+      </>
+    ),
+  },
+  {
+    name: "Nutritional benefits",
+    description: (
+      <>
+        Nutritional benefits: Hibiscus juice benefits include supporting heart health by lowering blood pressure and cholesterol, aiding liver function by protecting against fat buildup, and providing antioxidants that combat free radicals. It also helps regulate blood sugar, may aid in weight management, and can boost the immune system due to its high vitamin C and iron content.
+      </>
+    ),
+  },
+  {
+    name: "Food security (local to global)",
+    description: (
+      <>
+        Food security (local to global): Hibiscus juice carries traditional nutritional and herbal value while supporting local food security through small-scale processing and income generation. Such community-led innovations demonstrate how locally rooted, value-added products can be replicated and marketed globally to enhance sustainable nutrition and livelihoods.
+      </>
+    ),
+  },
+];
 
   return (
     <div

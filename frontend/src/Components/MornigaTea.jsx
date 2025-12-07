@@ -117,11 +117,7 @@ const Moringa = () => {
       name: "Food security (local to global)",
       description: (
         <>
-          In the Sundarbans, moringa offers a{" "}
-          <b className="font-bold">nutritional lifeline</b> where vegetable
-          access is limited. Globally, it is recognized as a{" "}
-          <b className="font-bold">climate-smart crop</b> that combats{" "}
-          <b className="font-bold">malnutrition</b> in vulnerable regions.
+         Particularly in the Indian Sundarbans and largely in India, Moringa serves as a vital nutritional source where access to fresh vegetables is limited due to salinity and remoteness. One tree whose leaves, flowers and stems are edible and supports household food security by providing vitamins, iron, and protein from a hardy, fast-growing tree. On a global scale, Moringa is recognized as a climate-smart crop that can combat malnutrition and micronutrient deficiencies in vulnerable regions.
         </>
       ),
     },
