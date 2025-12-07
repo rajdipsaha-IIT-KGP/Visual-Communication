@@ -83,7 +83,7 @@ const HibiscousTea = () => {
               className="w-70  md:w-70 h-70 mt-4 mb-2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
               
             />
-            <b className="font-bold">Gender Empowerment in preparing Hibiscus Tea</b>
+           
           </div>
         </>
       ),
